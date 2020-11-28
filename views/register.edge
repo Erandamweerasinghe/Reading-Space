@@ -1,0 +1,131 @@
+@layout('layouts.app')
+@section('content')
+<div>
+        @if(errors.length > 0)
+        <ul>
+        @each(error in errors)
+            <li>{{ error }}</li>
+        @endeach
+        </ul>
+        <br>
+        @endif
+</div>
+   <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-12 col-lg-12">
+                <div class="regi-form">
+                    <h3>Registration Form</h3>
+                    <div class="signup-content">
+                <div class="signup-img">
+                    <img src="/images/form-img.jpg" alt="">
+                    <div class="signup-img-content">
+                        <h2>Register now </h2>
+                        <p>while seats are available !</p>
+                    </div>
+                </div>
+                <div class="signup-form">
+                    <form action="/user/store" method="POST" class="register-form" id="register-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="form-input">
+                                    <label for="first_name" class="required">First name</label>
+                                    <input type="text" name="firstname" id="firstname" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="last_name" class="required">Last name</label>
+                                    <input type="text" name="lastname" id="lastname" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="birthday" class="required">Birthday</label>
+                                    <input type="date" name="birthday" id="birthday" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="email" class="required">Email</label>
+                                    <input type="text" name="email" id="email" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="phonenumber" class="required">Phone number</label>
+                                    <input type="text" name="phonenumber" id="phonenumber" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-radio">
+                                    <label for="gender" class="required">Gender</label>
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="gender" value = "male" id="male" checked>
+                                            <label for="men">Male</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="gender" value = "female" id="female">
+                                            <label for="female">Female</label>
+                                            <span class="check"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-input">
+                                    <label for="username" class="required">User Name</label>
+                                    <input type="text" name="username" id="username" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="password" class="required">Password</label>
+                                    <input type="password" name="password" id="password" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="confirmpassword" class="required">Confirm Password</label>
+                                    <input type="password" name="confirmpassword" id="confirmpassword" />
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                            <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+                </div><!-- .regi-form -->
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+    <div class="clients-logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 flex flex-wrap justify-content-center justify-content-lg-between align-items-center">
+                    <div class="logo-wrap">
+                        <img src="images/logo-1.png" alt="">
+                    </div><!-- .logo-wrap -->
+
+                    <div class="logo-wrap">
+                        <img src="images/logo-2.png" alt="">
+                    </div><!-- .logo-wrap -->
+
+                    <div class="logo-wrap">
+                        <img src="images/logo-3.png" alt="">
+                    </div><!-- .logo-wrap -->
+
+                    <div class="logo-wrap">
+                        <img src="images/logo-4.png" alt="">
+                    </div><!-- .logo-wrap -->
+
+                    <div class="logo-wrap">
+                        <img src="images/logo-5.png" alt="">
+                    </div><!-- .logo-wrap -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .clients-logo -->
+
+    @endsection
+    @section('script')
+
+    <script type='text/javascript' src='/js/jquery.js'></script>
+    <script type='text/javascript' src='/js/swiper.min.js'></script>
+    <script type='text/javascript' src='/js/masonry.pkgd.min.js'></script>
+    <script type='text/javascript' src='/js/jquery.collapsible.min.js'></script>
+    <script type='text/javascript' src='/js/custom.js'></script>
+
+    @endsection
